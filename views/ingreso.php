@@ -72,17 +72,18 @@ if (isset($_SESSION["user"])) {
                     <div class="row" id="app">
                         <div class="col l6">
                             <form @submit.prevent="buscar">
-                                <input type="text" class="col l6" placeholder="Rut" v-model="rut">
+                                <input type="text" class="col l6" placeholder="Rut del cliente" v-model="rut">
                                 <button class="btn fondoazul col l4">BUSCAR</button>
                             </form>
                         </div>
-                        <div class="col l6 m12 s12">
+                        <div class="col l12 m12 s12">
                             <p>
                                 <ul v-if="esta == true" class="collection">
-                                    <li class="collection-item">{{cliente.nombre_cliente}}</li>
-                                    <li class="collection-item">{{cliente.direccion_cliente}}</li>
-                                    <li class="collection-item">{{cliente.telefono_cliente}}</li>
-                                    <li class="collection-item">{{cliente.email_cliente}}</li>
+                                    <p>Datos del Cliente</p>
+                                    <li class="collection-item">Nombre: {{cliente.nombre_cliente}}</li>
+                                    <li class="collection-item">Dirección: {{cliente.direccion_cliente}}</li>
+                                    <li class="collection-item">Teléfono: {{cliente.telefono_cliente}}</li>
+                                    <li class="collection-item">Email: {{cliente.email_cliente}}</li>
                                 </ul>
                             </p>
                         </div>

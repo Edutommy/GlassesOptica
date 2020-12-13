@@ -1,7 +1,7 @@
 new Vue({
     el:'#app',
     data: {
-        url:"http://localhost:8080/Optica2020/",
+        url:"http://localhost:8080/Optica2020-master/",
         rut:"",
         fecha:"",
         recetas: [],
