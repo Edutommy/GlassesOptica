@@ -1,0 +1,19 @@
+.colorborde {
+  border: 1px solid #dadce0;
+}
+.trasparente {
+  background: transparent;
+}
+
+
+.activo {
+  background: white;
+}
+
+.azul {
+  color: #287ae6;
+}
+
+.fondoazul {
+  background: #287ae6;
+}
