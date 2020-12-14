@@ -17,13 +17,13 @@ class BuscarRecetaFecha
   }
   public function recetas()
   {
-    //if (isset($_SESSION["user"])) {
+    if (isset($_SESSION["user"])) {
       $modelo = new RecetaModel();
       $arr = $modelo->recetasXFecha($this->fecha);
       echo json_encode($arr);
-    //} else {
-    //  echo json_encode(["msg" => "<i class='fas fa-exclamation-circle'></i> Acceso Denegado"]);
-    //}
+    } else {
+      echo json_encode(["msg" => "<i class='fas fa-exclamation-circle'></i> Acceso Denegado"]);
+    }
   }
 }
 
