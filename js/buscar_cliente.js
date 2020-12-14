@@ -2,7 +2,7 @@ new Vue({
     el:'#app',
     data:{
         rut: "",
-        url: "http://localhost:8080/Optica2020-master/",
+        url: "https://glassesoptica.herokuapp.com/",
         cliente: {},
         esta: false,
     },

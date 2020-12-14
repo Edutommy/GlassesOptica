@@ -7,7 +7,7 @@ new Vue({
         tipos: [],
         id_armazon: '',
         armazones: [],
-        url: "http://localhost:8080/Optica2020-master/",
+        url: "https://glassesoptica.herokuapp.com/",
     },
     methods: {
         cargaMateriales: async function(){
