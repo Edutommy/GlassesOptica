@@ -10,8 +10,8 @@ ini_set("display_startup_errors", 1);
 error_reporting(E_ALL);
 
 if (isset($_SESSION["user"])) {
-  $model = new UsuarioModel();
-  $usuario = $model->getAllUsuarios();
+    $model = new UsuarioModel();
+    $usuario = $model->getAllUsuarios();
 }
 ?>
 
@@ -96,7 +96,9 @@ if (isset($_SESSION["user"])) {
                                         <button @click="abrirModal(r)" class="btn-small blue redondo">Detalle</button>
                                     </td>
                                     <td>
-                                        <img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/833px-PDF_file_icon.svg.png" alt="">
+                                        <div class="pdf">
+                                            <img @click="generarPDF(r.id)" height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/833px-PDF_file_icon.svg.png">
+                                        </div>
                                     </td>
                                 </tr>
                             </table>

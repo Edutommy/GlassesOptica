@@ -1,7 +1,7 @@
 new Vue({
     el:'#app',
     data: {
-        url:"https://glassesoptica.herokuapp.com/",
+        url:"http://localhost:8080/Optica2020-master/",
         rut:"",
         fecha:"",
         recetas: [],
@@ -45,6 +45,11 @@ new Vue({
             var modal = document.getElementById("modal1");
             var instance = M.Modal.getInstance(modal);
             instance.open();
+        },
+        generarPDF: function(id){
+            //alert(id);
+            console.log(id);
+            window.open(this.url + "controllers/ExportarPDF.php?id=" + id, "_blank");
         }
     },
     created(){}
