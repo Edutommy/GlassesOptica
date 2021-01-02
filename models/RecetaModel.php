@@ -79,7 +79,7 @@ class RecetaModel
             on cl.rut_cliente = receta.rut_cliente
         inner join usuario us
             on us.rut = receta.rut_usuario
-        where receta.rut_cliente = :A  ';
+        where receta.id_receta = :A  ';
         $stm = Conexion::conector()->prepare($sql);
         $stm->bindParam(":A", $id);
         $stm->execute();
