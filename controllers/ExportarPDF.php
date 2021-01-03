@@ -28,13 +28,13 @@ class ExportarPDF
         // set document information
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('Glasses Optica');
-        $pdf->SetTitle('Reporte de Receta '. $receta['id']);
+        $pdf->SetTitle('Reporte de Receta ' . $receta['id']);
         $pdf->SetSubject('Reporte de Glasses Optica');
         $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
         // set default header data
         //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 001', PDF_HEADER_STRING, array(0, 64, 255), array(0, 64, 128));
-        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'Glasses Optica', 'Reporte Receta '.$receta['nombre_cliente'], array(0, 64, 255), array(0, 64, 128));
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, 'Glasses Optica', 'Reporte Receta ' . $receta['nombre_cliente'], array(0, 64, 255), array(0, 64, 128));
         $pdf->setFooterData(array(0, 64, 0), array(0, 64, 128));
 
         // set header and footer fonts
@@ -80,15 +80,88 @@ class ExportarPDF
         $pdf->setTextShadow(array('enabled' => true, 'depth_w' => 0.2, 'depth_h' => 0.2, 'color' => array(196, 196, 196), 'opacity' => 1, 'blend_mode' => 'Normal'));
 
         // Set some content to print
-        $id = $receta['id'];
-        $cliente = $receta['nombre_cliente'];
-        $html = "
-        <h1>Reporte de Receta ID " . $id . "</h1>
-        <h2>Cliente " . $cliente . "</h2>
-        <i>This is the first example of TCPDF library.</i>
-        <p>This text is printed using the <i>writeHTMLCell()</i> method but you can also use: <i>Multicell(), writeHTML(), Write(), Cell() and Text()</i>.</p>
-        <p>Please check the source code documentation and other examples for further information.</p>
-        ";
+        $html = '
+        <h1 style="color:#6495ed">Reporte de Receta ID ' . $receta['id'] . '</h1>
+        <table border="1" style="color:#6495ed">
+            <tr>
+                <th>Cliente</th>
+                <td>' . $receta['nombre_cliente'] . '</td>
+            </tr>
+            <tr>
+                <th>RUT</th>
+                <td>' . $receta['rut_cliente'] . '</td>
+            </tr>
+            <tr>
+                <th>Teléfono</th>
+                <td>' . $receta["telefono_cliente"] . '</td>
+            </tr>
+        </table>
+        <h5 style="color:#6495ed">Tipo Lente: ' . $receta["tipo_lente"] . '</h5>
+        <table border="1" style="color:#6495ed">
+            <tr>
+                <th>Armazón</th>
+                <th>Material Cristal</th>
+                <th>Tipo Cristal</th>
+            </tr>
+            <tr>
+                <td>' . $receta["armazon"] . '</td>
+                <td>' . $receta["material_cristal"] . '</td>
+                <td>' . $receta["tipo_cristal"] . '</td>
+            </tr>
+        </table>
+        <h5 style="color:#6495ed">Base: ' . $receta["base"] . '</h5>
+        <table border="1" style="color:#6495ed">
+            <tr>
+                <th>Cilindro Ojo Derecho</th>
+                <th>Cilindro Ojo Izquierdo</th>
+            </tr>
+            <tr>
+                <td>' . $receta["cilindro_od"] . '</td>
+                <td>' . $receta["cilindro_oi"] . '</td>
+            </tr>
+        </table>
+        <h6 style="color:#6495ed">Distancia Pupilar: ' . $receta["distancia_pupilar"] . '</h6>
+        <table border="1" style="color:#6495ed">
+            <tr>
+                <th></th>
+                <th>Eje</th>
+                <th>Esfera</th>
+            </tr>
+            <tr>
+                <td>Ojo Izquierdo</td>
+                <td>' . $receta["eje_oi"] . '</td>
+                <td>' . $receta["esfera_oi"] . '</td>
+            </tr>
+            <tr>
+                <td>Ojo Derecho</td>
+                <td>' . $receta["eje_od"] . '</td>
+                <td>' . $receta["esfera_od"] . '</td>
+            </tr>
+        </table>
+        <h6 style="color:#6495ed">Observación: ' . $receta["observacion"] . '</h6>
+        <table border="1" style="color:#6495ed">
+            <tr>
+                <th>Fecha Entrega</th>
+                <th>Fecha Retiro</th>
+            </tr>
+            <tr>
+                <td>' . $receta["fecha_entrega"] . '</td>
+                <td>' . $receta["fecha_retiro"] . '</td>
+            </tr>
+        </table>
+        <h5></h5>
+        <table border="1" style="color:#00008b">
+            <tr>
+                <th>Vendedor</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>' . $receta["nombre_vendedor"] . '</td>
+                <td>$' . $receta["precio"] . '</td>
+            </tr>
+        </table>
+        <img src="../img/logodos.png" height="220px" width="900px">
+        ';
 
         // Print text using writeHTMLCell()
         $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
