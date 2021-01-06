@@ -124,12 +124,23 @@ if (isset($_SESSION["user"])) {
                                             RUT: {{receta.rut_cliente}}
                                         </div>
                                     </div>
+                                    <hr>
                                     <div class="row">
                                         <div class="col l4">
                                             Armazon: {{receta.armazon}}
                                         </div>
                                         <div class="col l4">
                                             Material Cristal: {{receta.material_cristal}}
+                                        </div>
+                                        <div class="col l4">
+                                            Tipo Cristal: {{receta.tipo_cristal}}
+                                        </div>
+                                        <div class="col l4">
+                                            Tipo Lente: {{receta.tipo_lente}}
+                                        </div>
+                                        <div class="col l4">
+                                            Esfera Ojo Izquierdo: {{receta.esfera_oi}}
+                                            Esfera Ojo Derecho: {{receta.esfera_od}}
                                         </div>
                                     </div>
                                 </div>
