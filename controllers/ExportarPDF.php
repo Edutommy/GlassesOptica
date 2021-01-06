@@ -160,7 +160,7 @@ class ExportarPDF
                 <td>$' . $receta["precio"] . '</td>
             </tr>
         </table>
-        <img src="../img/logodos.png" height="220px" width="900px">
+        
         ';
 
         // Print text using writeHTMLCell()
