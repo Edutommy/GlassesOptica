@@ -11,6 +11,33 @@ class RecetaModel
 {
     public function insertarReceta($data)
     {
+        $stm = Conexion::conector()->prepare("INSERT INTO receta VALUES(NULL,:tipo_lente,:esfera_oi,:esfera_od,:cilindro_oi,:cilindro_od,:eje_oi,:eje_od,:prisma,:base,
+        :armazon,:material_cristal,:tipo_cristal,
+        :distancia_pupilar,:valor_lente,:fecha_entrega,:fecha_retiro,:observacion,:rut_cliente,:fecha_visita_medico,:rut_medico,:nombre_medico,:rut_usuario,1)");
+
+        $stm->bindParam(":tipolente", $data['tipolente']);
+        $stm->bindParam(":esferaoiz", $data['esferaoiz']);
+        $stm->bindParam(":esferaode", $data['esferaode']);
+        $stm->bindParam(":cilindrooiz", $data['cilindrooiz']);
+        $stm->bindParam(":cilindroode", $data['cilindroode']);
+        $stm->bindParam(":ejeoiz", $data['ejeoiz']);
+        $stm->bindParam(":ejeode", $data['ejeode']);
+        $stm->bindParam(":prisma", $data['prisma']);
+        $stm->bindParam(":base", $data['base']);
+        $stm->bindParam(":armazon", $data['armazon']);
+        $stm->bindParam(":materialcristal", $data['materialcristal']);
+        $stm->bindParam(":tipocristal", $data['tipocristal']);
+        $stm->bindParam(":distanciapupilar", $data['distanciapupilar']);
+        $stm->bindParam(":valorlente", $data['valorlente']);
+        $stm->bindParam(":fechaentrega", $data['fechaentrega']);
+        $stm->bindParam(":fecharetiro", $data['fecharetiro']);
+        $stm->bindParam(":observacion", $data['observacion']);
+        $stm->bindParam(":rutcliente", $data['rutcliente']);
+        $stm->bindParam(":fechavimed", $data['fechavimed']);
+        $stm->bindParam(":rutmedico", $data['rutmedico']);
+        $stm->bindParam(":nombremedico", $data['nombremedico']);
+        $stm->bindParam(":rutusuario", $data['rutusuario']);
+        return $stm->execute();
     }
 
     public function recetasXRut($rut)

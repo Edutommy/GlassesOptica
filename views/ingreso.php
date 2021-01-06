@@ -26,7 +26,6 @@ if (isset($_SESSION["user"])) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel='stylesheet' href='../css/estilos.css'>
-    <link rel="stylesheet" href="../css/pene.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <title>Glasses Optica - Ingresar Receta</title>
 </head>
@@ -64,6 +63,7 @@ if (isset($_SESSION["user"])) {
                 </ul>
 
                 <!-- FIN DE NAV -->
+                <!-- BUSCAR CLIENTE -->
                 <br>
                 <div class="col l1 m4 s12"></div>
                 <div class="col l10 m4 s12 colorborde">
@@ -88,6 +88,7 @@ if (isset($_SESSION["user"])) {
                             </p>
                         </div>
                     </div>
+                    <!-- FIN DE BUSCAR -->
                     <div class="row">
                         <br>
                         <div class="col l6" id="cargaCBO">
@@ -127,11 +128,11 @@ if (isset($_SESSION["user"])) {
                             <div class="col l6 m6 s6 azul">
                                 <p>Tipo Lente:</p>
                                 <label>
-                                    <input type="checkbox" name="xx" value="1" />
+                                    <input type="radio" name="lejos" value="lejos" v-model="tipo_lentes" />
                                     <span>Lejos</span>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="xy" value="2" />
+                                    <input type="radio" name="cerca" value="cerca" v-model="tipo_lentes" />
                                     <span>Cerca</span>
                                 </label>
                             </div>
@@ -191,7 +192,7 @@ if (isset($_SESSION["user"])) {
                             </div>
                             <div class="col l4">
                                 <div class="input-field">
-                                    <button class="btn fondoazul">Crear Receta</button>
+                                    <button v-on:click="crearReceta()" class="btn fondoazul">Crear Receta</button>
                                 </div>
                             </div>
                         </div>
@@ -206,6 +207,7 @@ if (isset($_SESSION["user"])) {
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="../js/buscar_cliente.js"></script>
     <script src="../js/combobox.js"></script>
+    <script src="../js/ingresar_receta.js"></script>
     <script src='https://kit.fontawesome.com/2c36e9b7b1.js' crossorigin='anonymous'></script>
     <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous' />
     <script>
