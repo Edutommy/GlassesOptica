@@ -138,25 +138,22 @@ if (isset($_SESSION["user"])) {
                                         <div class="col l12">
                                             Tipo Lente: {{receta.tipo_lente}}
                                         </div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Esfera Ojo Izquierdo: {{receta.esfera_oi}}
                                         </div>
-                                        <div class="col l4"></div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Esfera Ojo Derecho: {{receta.esfera_od}}
                                         </div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Cilindro Ojo Izquierdo: {{receta.cilindro_oi}}
                                         </div>
-                                        <div class="col l4"></div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Cilindro Ojo Derecho: {{receta.cilindro_od}}
                                         </div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Eje Ojo Izquierdo: {{receta.eje_oi}}
                                         </div>
-                                        <div class="col l4"></div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Eje Ojo Derecho: {{receta.eje_od}}
                                         </div>
                                         <div class="col l4">
@@ -168,11 +165,10 @@ if (isset($_SESSION["user"])) {
                                         <div class="col l4">
                                             Distancia Pupilar: {{receta.distancia_pupilar}}
                                         </div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Fecha Enterga: {{receta.fecha_entrega}}
                                         </div>
-                                        <div class="col l4"></div>
-                                        <div class="col l4">
+                                        <div class="col l6">
                                             Fecha Retiro: {{receta.fecha_retiro}}
                                         </div>
                                     </div>
