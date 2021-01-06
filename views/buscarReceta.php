@@ -135,12 +135,47 @@ if (isset($_SESSION["user"])) {
                                         <div class="col l4">
                                             Tipo Cristal: {{receta.tipo_cristal}}
                                         </div>
+                                        <div class="col l4"></div>
                                         <div class="col l4">
                                             Tipo Lente: {{receta.tipo_lente}}
                                         </div>
+                                        <div class="col l4"></div>
                                         <div class="col l4">
                                             Esfera Ojo Izquierdo: {{receta.esfera_oi}}
+                                        </div>
+                                        <div class="col l4"></div>
+                                        <div class="col l4">
                                             Esfera Ojo Derecho: {{receta.esfera_od}}
+                                        </div>
+                                        <div class="col l4">
+                                            Cilindro Ojo Izquierdo: {{receta.cilindro.oi}}
+                                        </div>
+                                        <div class="col l4"></div>
+                                        <div class="col l4">
+                                            Cilindro Ojo Derecho: {{receta.cilindro.od}}
+                                        </div>
+                                        <div class="col l4">
+                                            Eje Ojo Izquierdo: {{receta.eje.oi}}
+                                        </div>
+                                        <div class="col l4"></div>
+                                        <div class="col l4">
+                                            Eje Ojo Derecho: {{receta.eje.od}}
+                                        </div>
+                                        <div class="col l4">
+                                            Prisma: {{receta.prisma}}
+                                        </div>
+                                        <div class="col l4">
+                                            Base: {{receta.base}}
+                                        </div>
+                                        <div class="col l4">
+                                            Distancia Pupilare: {{receta.distancia_pupilar}}
+                                        </div>
+                                        <div class="col l4">
+                                            Fecha Enterga: {{receta.fecha_entrega}}
+                                        </div>
+                                        <div class="col l4"></div>
+                                        <div class="col l4">
+                                            Fecha Retiro: {{receta.fecha_retiro}}
                                         </div>
                                     </div>
                                 </div>
