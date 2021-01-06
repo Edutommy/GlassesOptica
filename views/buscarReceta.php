@@ -135,11 +135,9 @@ if (isset($_SESSION["user"])) {
                                         <div class="col l4">
                                             Tipo Cristal: {{receta.tipo_cristal}}
                                         </div>
-                                        <div class="col l4"></div>
-                                        <div class="col l4">
+                                        <div class="col l12">
                                             Tipo Lente: {{receta.tipo_lente}}
                                         </div>
-                                        <div class="col l4"></div>
                                         <div class="col l4">
                                             Esfera Ojo Izquierdo: {{receta.esfera_oi}}
                                         </div>
@@ -168,7 +166,7 @@ if (isset($_SESSION["user"])) {
                                             Base: {{receta.base}}
                                         </div>
                                         <div class="col l4">
-                                            Distancia Pupilare: {{receta.distancia_pupilar}}
+                                            Distancia Pupilar: {{receta.distancia_pupilar}}
                                         </div>
                                         <div class="col l4">
                                             Fecha Enterga: {{receta.fecha_entrega}}
