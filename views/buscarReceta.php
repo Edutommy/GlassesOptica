@@ -124,6 +124,14 @@ if (isset($_SESSION["user"])) {
                                             RUT: {{receta.rut_cliente}}
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col l4">
+                                            Armazon: {{receta.armazon}}
+                                        </div>
+                                        <div class="col l4">
+                                            Material Cristal: {{receta.material_cristal}}
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">CERRAR</a>
