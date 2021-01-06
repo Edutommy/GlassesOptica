@@ -160,7 +160,6 @@ class ExportarPDF
                 <td>$' . $receta["precio"] . '</td>
             </tr>
         </table>
-        
         ';
 
         // Print text using writeHTMLCell()
