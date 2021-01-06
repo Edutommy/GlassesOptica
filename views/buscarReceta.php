@@ -148,18 +148,18 @@ if (isset($_SESSION["user"])) {
                                             Esfera Ojo Derecho: {{receta.esfera_od}}
                                         </div>
                                         <div class="col l4">
-                                            Cilindro Ojo Izquierdo: {{receta.cilindro.oi}}
+                                            Cilindro Ojo Izquierdo: {{receta.cilindro_oi}}
                                         </div>
                                         <div class="col l4"></div>
                                         <div class="col l4">
-                                            Cilindro Ojo Derecho: {{receta.cilindro.od}}
+                                            Cilindro Ojo Derecho: {{receta.cilindro_od}}
                                         </div>
                                         <div class="col l4">
-                                            Eje Ojo Izquierdo: {{receta.eje.oi}}
+                                            Eje Ojo Izquierdo: {{receta.eje_oi}}
                                         </div>
                                         <div class="col l4"></div>
                                         <div class="col l4">
-                                            Eje Ojo Derecho: {{receta.eje.od}}
+                                            Eje Ojo Derecho: {{receta.eje_od}}
                                         </div>
                                         <div class="col l4">
                                             Prisma: {{receta.prisma}}
